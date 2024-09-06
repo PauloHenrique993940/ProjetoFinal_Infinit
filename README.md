@@ -29,5 +29,5 @@ O Sistema de Gerenciamento de Segurança das Indústrias Wayne é uma aplicaçã
 1. **Clone o Repositório:**
    ```bash
    git clone https://github.com/seu-usuario/nome-do-repositorio.git
-![Texto Alternativo](https://wayne-nine.vercel.app/)
+
 
