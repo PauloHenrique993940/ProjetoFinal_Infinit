@@ -163,3 +163,6 @@ footer a:hover {
     background-color:  #333;
 }
 
+.hidden {
+    display: none;
+}

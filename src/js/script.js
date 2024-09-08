@@ -17,16 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
         resources.forEach((resource, index) => {
             const li = document.createElement('li');
             li.textContent = `${resource.name} (${resource.type})`;
-
-            // Botão Remover
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Remover';
             removeButton.addEventListener('click', () => {
                 resources.splice(index, 1);
                 updateInventory();
             });
-
-            // Botão Editar
             const editButton = document.createElement('button');
             editButton.textContent = 'Editar';
             editButton.classList.add('edit');
@@ -36,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 resources.splice(index, 1);
                 updateInventory();
             });
-
             li.appendChild(removeButton);
             li.appendChild(editButton);
             inventoryList.appendChild(li);
@@ -52,30 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const role = document.getElementById('role').value;
 
         // Simulação de autenticação
-        if (username && password) {
-            loginUser(role);
+        if (username === 'batman' && password === 'wayne' && role === 'admin') {
+            // Redirecionar para a página do administrador
+            window.location.href = 'admin-dash.html'; // Substitua pelo caminho para sua página do administrador
+        } else if (username && password) {
+            loginMessage.textContent = 'Acesso limitado ao dashboard.';
+            dashboard.classList.remove('hidden');
+            gestao.classList.add('hidden');
+
+            if (role === 'funcionario') {
+                employeeView.classList.remove('hidden');
+                managerView.classList.add('hidden');
+                adminView.classList.add('hidden');
+            } else if (role === 'gerente') {
+                employeeView.classList.add('hidden');
+                managerView.classList.remove('hidden');
+                adminView.classList.add('hidden');
+            }
         } else {
-            loginMessage.textContent = 'Credenciais inválidas!';
+            loginMessage.textContent = 'Login falhou. Verifique suas credenciais.';
         }
     });
-
-    function loginUser(role) {
-        // Ocultar a tela de login e mostrar o dashboard
-        document.getElementById('login').classList.add('hidden');
-        document.getElementById('dashboard').classList.remove('hidden');
-
-        // Exibir a visão correta de acordo com o tipo de usuário
-        if (role === 'admin') {
-            window.location.href = "admin-dash.html"; // Redirecionar para a página do admin
-        } else if (role === 'gerente') {
-            document.getElementById('managerView').classList.remove('hidden');
-            adminView.classList.add('hidden');
-        } else {
-            document.getElementById('employeeView').classList.remove('hidden');
-            managerView.classList.add('hidden');
-            adminView.classList.add('hidden');
-        }
-    }
 
     // Adicionar novo recurso
     resourceForm.addEventListener('submit', (e) => {
@@ -94,5 +86,3 @@ document.addEventListener('DOMContentLoaded', () => {
         gestao.classList.remove('hidden');
     });
 });
-
-
