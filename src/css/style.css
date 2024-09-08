@@ -30,8 +30,12 @@ body {
     margin-bottom: 0;
 }
 header {
-    background-color: var(--background-color);
+    background-color: #141414;
     padding: 20px;
+    
+}
+hr{
+color: #ffc107;
 }
 .logo{
     width: 40px;
@@ -89,7 +93,7 @@ form input, form select {
 
 form button {
     padding: 10px;
-    background-color: #B22222;
+    background-color: blue;
     color: var(--navItemLink);
     border: none;
     cursor: pointer;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Recursos</title>
+    <link rel="stylesheet" href="./src/css/gestao.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/admin-dash.html">Dashboard</a></li>
+                <li><a href="/gestao.html">Gestão de Recursos</a></li>
+                <li><a href="#relatorios">Relatórios de Segurança</a></li>
+                <li><a href="./index.html">Controle de Acesso</a></li>
+                <li><a href="./index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="gestao">
+            <h1>Gestão de Recursos</h1>
+            <div class="content">
+                <p>Bem-vindo à seção de Gestão de Recursos. Aqui você pode gerenciar todos os recursos disponíveis.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome do Recurso</th>
+                            <th>Categoria</th>
+                            <th>Quantidade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Recurso A</td>
+                            <td>Categoria 1</td>
+                            <td>10</td>
+                            <td>
+                                <button class="btn-edit">Editar</button>
+                                <button class="btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Recurso B</td>
+                            <td>Categoria 2</td>
+                            <td>5</td>
+                            <td>
+                                <button class="btn-edit">Editar</button>
+                                <button class="btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="./src/js/gestao.js"></script>
+
+</body>
+</html>

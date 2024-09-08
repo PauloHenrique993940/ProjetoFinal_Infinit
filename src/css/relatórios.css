@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Cor de fundo escura */
+    color: #e0e0e0; /* Texto claro */
+}
+
+header {
+    background-color: #333; /* Fundo escuro para o cabeçalho */
+    color: #f1c40f; /* Amarelo para destacar o título */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #f1c40f; /* Linha inferior amarela */
+}
+
+nav {
+    background-color: #000; /* Preto para o menu */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Cinza escuro para hover */
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.report-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #2e2e2e; /* Cinza escuro para as seções */
+    border-radius: 8px;
+}
+
+h2 {
+    color: #f1c40f; /* Amarelo para títulos */
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #444; /* Bordas escuras */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333; /* Fundo escuro para cabeçalhos */
+    color: #f1c40f; /* Amarelo para texto dos cabeçalhos */
+}
+
+tr:nth-child(even) {
+    background-color: #2c2c2c; /* Cinza escuro alternado */
+}
+
+tr:hover {
+    background-color: #444; /* Cinza mais claro para hover nas linhas */
+}
+
+footer {
+    background-color: #333; /* Fundo escuro para o rodapé */
+    color: #f1c40f; /* Amarelo para o texto do rodapé */
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+}
+
+select{
+    width: 200px;
+    height: 30px;
+}

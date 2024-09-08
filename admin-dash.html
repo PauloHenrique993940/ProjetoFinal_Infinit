@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Inventário - Batman</title>
+    <link rel="stylesheet" href="src/css/dash.css">
+</head>
+<body>
+    <header>
+        <img src="src/image/-LOGO BATMAN.svg" alt="Logo do Batman" class="logo">
+        <h1>Indústrias Wayne - Inventário</h1>
+        <nav>
+            <ul>
+                <li><a href="/admin-dash.html">Dashboard</a></li>
+                <li><a href="/gestao.html">Gestão de Recursos</a></li>
+                <li><a href="/relatorios.html">Relatórios </a></li>
+                <li><a href="#acesso">Controle de Acesso</a></li>
+                <li><a href="/index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+        <h2>Painel de Controle do Administrador</h2>
+        <div class="dashboard-grid">
+            <div class="dashboard-item">
+                <h3>Recursos Atuais</h3>
+                <ul id="inventory">
+                    <li>Batmóvel - Veículo</li>
+                    <li>Batarang - Equipamento</li>
+                    <li>Batcomputer - Dispositivo</li>
+                </ul>
+            </div>
+
+            <div class="dashboard-item">
+                <h3>Adicionar Novo Recurso</h3>
+                <form id="resourceForm">
+                    <label for="resourceName">Nome do Recurso:</label>
+                    <input type="text" id="resourceName" name="resourceName" required>
+                    <label for="resourceType">Tipo:</label>
+                    <select id="resourceType" name="resourceType" required>
+                        <option value="equipamento">Equipamento</option>
+                        <option value="veiculo">Veículo</option>
+                        <option value="dispositivo">Dispositivo</option>
+                    </select>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+
+            <div class="dashboard-item">
+                <h3>Relatórios de Segurança</h3>
+                <p>Monitoramento de atividades suspeitas e segurança em tempo real.</p>
+            </div>
+
+            <div class="dashboard-item">
+                <h3>Controle de Acesso</h3>
+                <p>Gerenciar permissões de usuários e grupos.</p>
+                <button id="manageAccess">Gerenciar Acesso</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gestão de Recursos -->
+    <section id="gestao" class="hidden">
+        <h2>Gestão de Recursos</h2>
+        <form id="manageResourcesForm">
+            <label for="resourceAction">Ação:</label>
+            <select id="resourceAction" name="resourceAction" required>
+                <option value="adicionar">Adicionar</option>
+                <option value="editar">Editar</option>
+                <option value="remover">Remover</option>
+            </select>
+            <label for="resourceSelect">Recurso:</label>
+            <select id="resourceSelect" name="resourceSelect" required>
+                <option value="batmovel">Batmóvel</option>
+                <option value="batarang">Batarang</option>
+                <option value="batcomputer">Batcomputer</option>
+            </select>
+            <button type="submit">Executar Ação</button>
+        </form>
+        <div id="resourceStatus">
+            <h3>Status do Inventário</h3>
+            <ul id="resourceList">
+                <li>Batmóvel - Disponível</li>
+                <li>Batarang - Em Uso</li>
+                <li>Batcomputer - Manutenção</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="./src/js/inventario.js"></script>
+</body>
+</html>

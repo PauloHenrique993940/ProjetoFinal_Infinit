@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (role === 'gerente') {
             document.getElementById('managerView').classList.remove('hidden');
             adminView.classList.add('hidden');
+            employeeView.classList.add('hidden');
         } else {
             document.getElementById('employeeView').classList.remove('hidden');
             managerView.classList.add('hidden');
@@ -94,5 +95,3 @@ document.addEventListener('DOMContentLoaded', () => {
         gestao.classList.remove('hidden');
     });
 });
-
-

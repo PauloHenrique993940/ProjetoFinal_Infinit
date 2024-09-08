@@ -1,0 +1,167 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #e0e0e0;
+    font-size: 16px;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #f39c12;
+}
+
+.logo {
+    width: 80px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Seção Dashboard */
+#dashboard {
+    padding: 20px;
+}
+
+h2 {
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-item h3 {
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+form input, form select {
+    background-color: #444;
+    color: #fff;
+}
+
+form button {
+    background-color: #f39c12;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e67e22;
+}
+
+/* Botão de Gerenciamento */
+button {
+    background-color: #f39c12;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+/* Seções Escondidas */
+.hidden {
+    display: none;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
