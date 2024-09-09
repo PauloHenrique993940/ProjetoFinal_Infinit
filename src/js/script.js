@@ -45,13 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Simulação de autenticação
         if (username === 'batman' && password === 'wayne' && role === 'admin') {
+            // Login de administrador com senha correta
             window.location.href = 'admin-dash.html'; // Página do administrador
-        } else if (role === 'gerente') {
-            // Qualquer senha é aceita para gerente
-            window.location.href = 'gerente.html'; // Página do gerente
+        } else if (username === 'batman' && role === 'gerente') {
+            // Gerente pode usar qualquer senha, exceto a senha de administrador
+            if (password !== 'wayne') {
+                alert("Gerente logado no sistema");
+                window.location.href = 'gerente.html'; // Página do gerente
+            } else {
+                loginMessage.textContent = 'Senha de administrador não permitida para o gerente.';
+            }
         } else if (role === 'funcionario') {
-            // Qualquer senha é aceita para funcionário
-            window.location.href = 'funcionario.html'; // Página do funcionário
+            // Funcionário pode usar qualquer senha, exceto a senha de administrador
+            if (password !== 'wayne') {
+                window.location.href = 'funcionario.html'; // Página do funcionário
+            } else {
+                loginMessage.textContent = 'Senha de administrador não permitida para o funcionário.';
+            }
         } else {
             loginMessage.textContent = 'Login falhou. Verifique suas credenciais.';
         }
@@ -69,4 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
 
