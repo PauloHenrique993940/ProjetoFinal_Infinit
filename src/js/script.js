@@ -45,19 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Simulação de autenticação
         if (username === 'batman' && password === 'wayne' && role === 'admin') {
-            // Login de administrador com senha correta
-            window.location.href = 'admin-dash.html'; // Página do administrador
+            // Adicionar a animação de fade-out
+            document.body.classList.add('fade-out');
+
+            // Redirecionar após a animação (1 segundo)
+            setTimeout(() => {
+                window.location.href = 'admin-dash.html'; // Página do administrador
+            }, 1000);
         } else if (username === 'batman' && role === 'gerente') {
-            // Gerente pode usar qualquer senha, exceto a senha de administrador
             if (password !== 'wayne') {
                 alert("Gerente logado no sistema");
                 window.location.href = 'gerente.html'; // Página do gerente
             } else {
                 loginMessage.textContent = 'Senha de administrador não permitida para o gerente.';
             }
+        } else if (username !== 'batman' && role === 'gerente') {
+            alert("Gerente logado no sistema");
+            window.location.href = 'gerente.html'; // Página do gerente
         } else if (role === 'funcionario') {
-            // Funcionário pode usar qualquer senha, exceto a senha de administrador
-            if (password !== 'wayne') {
+            if (password !== ' ') {
                 window.location.href = 'funcionario.html'; // Página do funcionário
             } else {
                 loginMessage.textContent = 'Senha de administrador não permitida para o funcionário.';
