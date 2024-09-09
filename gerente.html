@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Gerente - Wayne Industries</title>
+    <link rel="stylesheet" href="./src/css/gerente.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Wayne Industries</div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Gerenciar Recursos</a></li>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>Bem-vindo, Gerente!</h1>
+            <p>Aqui você pode gerenciar suas atividades e recursos.</p>
+        </section>
+
+        <section class="content">
+            <h2>Gerenciar Recursos</h2>
+            
+            <!-- Formulário para adicionar recursos -->
+            <form id="resourceForm" class="resource-form">
+                <label for="resourceName">Nome do Recurso:</label>
+                <input type="text" id="resourceName" required>
+                
+                <label for="resourceType">Tipo de Recurso:</label>
+                <input type="text" id="resourceType" required>
+                
+                <button type="submit">Adicionar Recurso</button>
+            </form>
+            
+            <!-- Lista de recursos -->
+            <ul id="inventory" class="inventory-list">
+                <!-- Recursos serão adicionados aqui dinamicamente -->
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Wayne Industries. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./src/js/gerente.js"></script>
+</body>
+</html>
+

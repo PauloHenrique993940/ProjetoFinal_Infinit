@@ -1,15 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
-
-:root{
-    --background-color: #000000;
-    --yellow: #ffc107;
-    --redText: #d31f1f;
-    --subtitle: #1E90FF;
-    --navItemLink: #fff;
-    --backgroundButton: #B22222;
-}
-
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -18,151 +7,142 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url(/src/image/CAPA_PROJETO.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    justify-content: center;
-    color: var(--navItemLink);
-    text-align: center;
-    height: auto;
-    font-family: 'Merriweather', serif;
-    margin-bottom: 0;
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    height: 100vh;            /* Garante que o body ocupe toda a altura da tela */
 }
+
 header {
-    background-color: #141414;
+    background-color: #000;
+    color: #f0f0f0;
     padding: 20px;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 3px solid #444;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-hr{
-color: #ffc107;
+
+header .logo {
+    height: 50px;
 }
-.logo{
-    width: 40px;
-}
-h1 {
-    font-size: 2rem;
-    /*color: blue; */
-    color: #4169E1;
-    text-transform: uppercase;
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
 nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li a {
-    color: var(--navItemLink);
+    color: #f0f0f0;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
 }
-a:hover{
-    color: var(--yellow);
+
+nav ul li a:hover {
     text-decoration: underline;
-
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 100px;  /* Ajusta a margem para compensar o header fixo */
+}
+
 section {
-    margin: 50px auto;
-    width: 80%;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
 }
 
-h2{
-    color: var(--subtitle);
+h2 {
+    color: #ffcc00;
+    margin-bottom: 20px;
 }
 
 form {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
-    width: 50%;
-}
-
-form label {
-    margin: 10px 0 5px 0;
-}
-
-form input, form select {
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-form button {
-    padding: 10px;
-    background-color: blue;
-    color: var(--navItemLink);
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-form button:hover{
-    background-color: #333;
-
-}
-
-footer {
-    padding: 20px;
-    color: var(--navItemLink);
-    position: fixed;
-    bottom: 0;
+    align-items: center;
     width: 100%;
 }
 
-footer a {
-    color: #4caf50;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.hidden {
-    display: none;
-}
-
-#inventory {
-    margin-top: 20px;
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+    width: 100%;
     text-align: left;
 }
 
-#inventory li {
-    margin: 5px 0;
+form input, form select {
+    width: 100%;  /* Preenche toda a largura disponível */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #222;
+    color: #f0f0f0;
 }
 
-#inventory button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #ff4c4c;
-    color: var(--navItemLink);
-    border: none;
-    cursor: pointer;
+form button {
+    background-color: #000000; /* Preto */
+    color: #ffc107; /* Amarelo */
+    border: 2px solid #ffc107; /* Borda amarela para destaque */
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
 }
 
-#inventory button.edit {
-    background-color: #4caf50;
-}
-
-#manageResources{
-    width: 200px;
-    background-color: var(--subtitle);
-    color: var(--navItemLink);
-    height: 40px;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-#manageResources:hover{
-    background-color:  #333;
+form button:hover {
+    background-color: #ffc107; /* Amarelo no hover */
+    color: #000000; /* Texto preto no hover */
 }
 
 .hidden {
     display: none;
 }
+
+.user-view {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+#resourceList ul {
+    list-style: none;
+    padding: 0;
+}
+
+#resourceList ul li {
+    background-color: #444;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#resourceList ul li:hover {
+    background-color: #555;
+}
+

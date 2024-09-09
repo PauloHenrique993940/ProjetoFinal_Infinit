@@ -1,0 +1,163 @@
+/* src/css/atividades.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Remove o overflow horizontal */
+}
+
+.header {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #f1c40f;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    padding: 20px;
+    margin-top: 80px; /* Adiciona margem para compensar a altura do cabeçalho fixo */
+    background: url('https://example.com/batman-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    width: 80%;
+    max-width: 800px;
+    margin: 80px auto 20px; /* Garante espaço suficiente abaixo do cabeçalho e centraliza o conteúdo */
+    flex: 1; /* Faz o conteúdo principal crescer para preencher o espaço disponível */
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2em;
+    color: #f1c40f;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.content h2 {
+    font-size: 1.8em;
+    color: #f1c40f;
+    margin-bottom: 15px;
+}
+
+.activity-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.activity-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+.activity-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1c40f;
+    color: #000;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.activity-form button:hover {
+    background-color: #e1b300;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-list li {
+    background-color: #222;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #ddd;
+    position: relative;
+}
+
+.activity-list button {
+    background: #f1c40f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.activity-list button:hover {
+    background: #e1b300;
+}
+
+.footer {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Atividades - Wayne Industries</title>
+    <link rel="stylesheet" href="./src/css/atividades.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Wayne Industries</div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Gerenciar Recursos</a></li>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>Bem-vindo, Funcionário!</h1>
+            <p>Aqui você pode visualizar e gerenciar suas atividades.</p>
+        </section>
+
+        <section class="content">
+            <h2>Atividades</h2>
+            
+            <!-- Formulário para adicionar atividades -->
+            <form id="activityForm" class="activity-form">
+                <label for="activityName">Nome da Atividade:</label>
+                <input type="text" id="activityName" required>
+                
+                <label for="activityDate">Data da Atividade:</label>
+                <input type="date" id="activityDate" required>
+                
+                <button type="submit">Adicionar Atividade</button>
+            </form>
+            
+            <!-- Lista de atividades -->
+            <ul id="activityList" class="activity-list">
+                <!-- Atividades serão adicionadas aqui dinamicamente -->
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Wayne Industries. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./src/js/atividades.js"></script>
+</body>
+</html>
+
