@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #e5e5e5;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    flex: 1;
+    /* Faz com que o main ocupe todo o espaço disponível */
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.user-management h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+#user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#user-form label {
+    font-weight: bold;
+}
+
+#user-form input,
+#user-form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+
+#user-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #1b1b1b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#user-form button:hover {
+    background-color: #e5b700;
+}
+
+.user-list {
+    margin-top: 30px;
+}
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2a2a;
+}
+
+.user-list table th,
+.user-list table td {
+    padding: 12px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+.user-list table th {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+.user-list table td {
+    color: #fff;
+}
+
+.user-list table td button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #1b1b1b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-list table td button:hover {
+    background-color: #e5b700;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}

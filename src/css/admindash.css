@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #333;
+}
+
+header .logo {
+    width: 50px;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+#dashboard {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-item {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+h2, h3 {
+    color: #f39c12;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    color: #fff;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12;
+    color: #000;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+.hidden {
+    display: none;
+}
+
+#gestao {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#resourceStatus {
+    margin-top: 20px;
+}
+
+#resourceList {
+    list-style: none;
+}
+
+#resourceList li {
+    margin-bottom: 5px;
+}
+
+#manageAccess {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#manageAccess:hover {
+    background-color: #c0392b;
+}

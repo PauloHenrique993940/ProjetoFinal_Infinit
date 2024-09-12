@@ -49,27 +49,59 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add('fade-out');
 
             // Redirecionar após a animação (1 segundo)
+            Swal.fire({
+                title: 'Bem-vindo, Cavaleiro das Trevas!',
+                text: 'Você está no controle da segurança de Gotham. Acompanhe as atividades e gerencie os recursos.',
+                icon: 'success',
+                background: '#1c1c1c',  /* Fundo preto/cinza escuro (tema Batman) */
+                color: '#f1c40f',       /* Texto amarelo (cor do símbolo do Batman) */
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: '#f1c40f', /* Botão amarelo */
+                iconColor: '#f1c40f',   /* Ícone de sucesso em amarelo */
+                backdrop: `
+                    rgba(0, 0, 0, 0.9)
+                    url("https://i.imgur.com/DPnJcQZ.png")  /* Imagem do símbolo do Batman */
+                    left top
+                    no-repeat
+                `
+            });
+            
             setTimeout(() => {
-                window.location.href = 'admin-dash.html'; // Página do administrador
+                
+                window.location.href = 'admin-dash.html'; //Direciona para Página do administrador
             }, 1000);
-        } else if (username === 'batman' && role === 'gerente') {
+        } else if (username !== 'batman' && role === 'gerente') {
             if (password !== 'wayne') {
                 alert("Gerente logado no sistema");
-                window.location.href = 'gerente.html'; // Página do gerente
+                window.location.href = 'gerente.html'; // Direciona para Página do gerente
             } else {
                 loginMessage.textContent = 'Senha de administrador não permitida para o gerente.';
             }
         } else if (username !== 'batman' && role === 'gerente') {
             alert("Gerente logado no sistema");
-            window.location.href = 'gerente.html'; // Página do gerente
-        } else if (role === 'funcionario') {
-            if (password !== ' ') {
-                window.location.href = 'funcionario.html'; // Página do funcionário
+            window.location.href = 'gerente.html'; // Direciona para Página do gerente
+
+        } else if (username !== 'batman' && role === 'funcionario') {
+            if (password !== 'wayne') {
+                alert("Funcionário logado no sistema")
+                window.location.href = 'funcionario.html'; // Direciona para Página do funcionário
             } else {
                 loginMessage.textContent = 'Senha de administrador não permitida para o funcionário.';
             }
         } else {
-            loginMessage.textContent = 'Login falhou. Verifique suas credenciais.';
+            //loginMessage.textContent = 'Login falhou.Funcionário não deve utilizar  nome do administrador do Sistema';
+            Swal.fire({
+                title: 'Ação não permitida!',
+                text: 'Não é permitido utilizar o nome "Administrador". Por favor, escolha outro nome de usuário.',
+                icon: 'error',
+                confirmButtonText: 'Entendi',
+                background: '#1c1c1c',  /* Fundo preto/cinza escuro (tema Batman) */
+                color: '#f1c40f',       /* Texto amarelo (cor do símbolo do Batman) */
+                confirmButtonColor: '#f1c40f', /* Botão amarelo */
+                iconColor: '#f1c40f'    /* Cor do ícone também em amarelo */
+            });
+            
+            
         }
     });
 
@@ -85,6 +117,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Quando a janela carregar, adicione a classe 'shake' ao body
+window.onload = function() {
+    document.body.classList.add('shake');
+
+    // Remover a classe 'shake' após a animação terminar (para evitar repetição)
+    setTimeout(function() {
+        document.body.classList.remove('shake');
+    }, 1500);  // 1500ms = 1.5 segundos (três vezes a duração da animação)
+};
 
 
 

@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Estilos para página de Loguin */
 body {
     font-family: Arial, sans-serif;
     background-color: #1b1b1b;
@@ -22,7 +23,7 @@ header {
     color: #f0f0f0;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     border-bottom: 3px solid #444;
@@ -38,6 +39,9 @@ header .logo {
 header h1 {
     margin: 0;
     font-size: 24px;
+    color: #f0f0f0;
+    text-align: center;
+    width: 600px;
 }
 
 nav ul {
@@ -109,7 +113,7 @@ form button {
     background-color: #000000; /* Preto */
     color: #ffc107; /* Amarelo */
     border: 2px solid #ffc107; /* Borda amarela para destaque */
-    width: 300px;
+    width: 100%;
     height: 50px;
     font-size: 18px;
 }
@@ -154,4 +158,25 @@ form button:hover {
 
 .fade-out {
     animation: fadeOut 1s forwards;
+}
+
+/* Definindo a animação de tremor */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Classe que aplica o tremor */
+.shake {
+    animation: shake 0.5s; /* Duração de 0.5s */
+    animation-iteration-count: 3; /* Tremerá 3 vezes */
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Acesso de Usuários - Batman</title>
+    <link rel="stylesheet" href="src/css/usuario.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de Gerenciamento de Acesso - Indústrias Wayne</h1>
+        <nav>
+            <ul>
+                <li><a href="admin-dash.html">Dashboard</a></li>
+                <li><a href="relatorios.html">Recursos</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="user-management">
+            <h2>Gerenciamento de Usuários</h2>
+
+            <form id="user-form">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="role">Nível de Acesso:</label>
+                <select id="role" name="role">
+                    <option value="employee">Funcionário</option>
+                    <option value="manager">Gerente</option>
+                    <option value="admin">Administrador</option>
+                    <option value="visitante">Visitante</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="intern">Estagiário</option>
+                    <option value="consultant">Consultor</option>
+                    <option value="contractor">Terceirizado</option>
+                </select>
+
+                <button type="submit">Adicionar Usuário</button>
+            </form>
+
+            <div class="user-list">
+                <h3>Lista de Usuários</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome de Usuário</th>
+                            <th>Nível de Acesso</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Usuários serão listados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wayne Enterprises. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./src/js/acessoUsuario.js"></script>
+</body>
+
+</html>
